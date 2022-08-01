@@ -5,10 +5,10 @@ public class Main {
 
     public static void main(String[] args) {
         
-        Item itemTeste1 = new Item("Maçã", TipoProduto.Hortifruti, 5, 0.50);
-        Item itemTeste2 = new Item("Banana", TipoProduto.Hortifruti, 5, 0.30);
-        Item itemTeste3 = new Item("Morango", TipoProduto.Hortifruti, 5, 0.50);
-        Item itemTeste4 = new Item("Morango", TipoProduto.Hortifruti, 5, 0.50);
+        Item itemTeste1 = new Item("Maca", TipoProduto.HORTIFRUTI, 5, 0.50);
+        Item itemTeste2 = new Item("Banana", TipoProduto.HORTIFRUTI, 5, 0.30);
+        Item itemTeste3 = new Item("Morango", TipoProduto.HORTIFRUTI, 5, 1.00);
+        Item itemTeste4 = new Item("Morango", TipoProduto.HORTIFRUTI, 5, 1.00);
 
         CarrinhoCompras carrinho = new CarrinhoCompras();
 
@@ -25,6 +25,11 @@ public class Main {
 
         System.out.println();
         System.out.println("Carrinho pos-exclusao:");
+        carrinho.listaCarrinho();
+        
+        System.out.println();
+        System.out.println("Carrinho pos-ordenacao:");
+        carrinho.ordenaCarrinho(TipoOrdenacao.PRECOUNITARIO);
         carrinho.listaCarrinho();
 
     }

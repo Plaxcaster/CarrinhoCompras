@@ -29,6 +29,29 @@ public class CarrinhoCompras {
     public void removeItem(Item i){
         carrinho.remove(i);
     }
+    
+    public void ordenaCarrinho (TipoOrdenacao tipo) {
+    	switch (tipo) {
+		case PRECOUNITARIO: {
+			carrinho.sort( (i1, i2) -> Double.compare(i1.getPrecoUnitario(), i2.getPrecoUnitario()));
+			break;
+		}
+		case PRODUTO: {
+			carrinho.sort( (i1, i2) -> i1.getProduto().compareTo(i2.getProduto()));
+			break;
+		}
+		case QUANTIDADE: {
+			carrinho.sort( (i1, i2) -> Integer.compare(i1.getQuantidade(), i2.getQuantidade()));
+			break;
+		}
+		case TOTALPORITEM: {
+			carrinho.sort( (i1, i2) -> Double.compare(i1.getTotalPorItem(), i2.getTotalPorItem()));
+			break;
+		}
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + tipo);
+		}
+    }
 
  	
 }
