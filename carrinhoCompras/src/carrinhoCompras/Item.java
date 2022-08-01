@@ -24,6 +24,7 @@ public class Item {
 	public String toString() {
 		return "Item [Produto=" + Produto + 
 				", Tipo Produto=" + tipoProduto + 
+				", Desconto=" + tipoProduto.getDesconto() +
 				", PrecoUnitario=" + PrecoUnitario +
 				", Quantidade=" + Quantidade + 
 				", TotalPorItem=" + TotalPorItem +
