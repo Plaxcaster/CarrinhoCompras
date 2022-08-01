@@ -21,15 +21,15 @@ public class Main {
         System.out.println("Carrinho pos-adicao:");
         carrinho.listaCarrinho();
 
+        System.out.println();
+        System.out.println("Carrinho pos-ordenacao:");
+        carrinho.ordenaCarrinho(TipoOrdenacao.QUANTIDADE);
+        carrinho.listaCarrinho();
+
         carrinho.removeItem(itemTeste2);
 
         System.out.println();
         System.out.println("Carrinho pos-exclusao:");
-        carrinho.listaCarrinho();
-        
-        System.out.println();
-        System.out.println("Carrinho pos-ordenacao:");
-        carrinho.ordenaCarrinho(TipoOrdenacao.PRECOUNITARIO);
         carrinho.listaCarrinho();
 
     }
