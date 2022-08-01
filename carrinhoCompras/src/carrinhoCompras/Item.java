@@ -22,13 +22,10 @@ public class Item {
     //tostring
 	@Override
 	public String toString() {
-		return "Item [Produto=" + Produto + 
-				", Tipo Produto=" + tipoProduto + 
-				", Desconto=" + tipoProduto.getDesconto() +
-				", PrecoUnitario=" + PrecoUnitario +
-				", Quantidade=" + Quantidade + 
-				", TotalPorItem=" + TotalPorItem +
-				", TotalDesconto=" + TotalDesconto + "]";
+		return "Item [Produto=" + Produto +
+				", Quantidade=" + Quantidade +
+				", Preço Unitário =" + PrecoUnitario +
+				", Total por Item=" + TotalPorItem + "]";
 	}
 
 	
