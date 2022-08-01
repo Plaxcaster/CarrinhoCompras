@@ -15,4 +15,9 @@ public enum TipoProduto {
 		this.desconto = desconto;
 	}
 
+	public double getDesconto() {
+		return desconto;
+	}
+
+	
 }

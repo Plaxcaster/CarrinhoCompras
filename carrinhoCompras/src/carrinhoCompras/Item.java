@@ -7,6 +7,7 @@ public class Item {
     protected int Quantidade;
     double PrecoUnitario;
     double TotalPorItem;
+    double TotalDesconto;
 
 
     public Item(String produto, TipoProduto tipoProduto, int quantidade, double precoUnitario) {
@@ -15,13 +16,18 @@ public class Item {
         this.Quantidade = quantidade;
         this.PrecoUnitario = precoUnitario;
         this.TotalPorItem = Quantidade*PrecoUnitario;
+        this.TotalDesconto = Quantidade*tipoProduto.getDesconto();
     }
 
     //tostring
 	@Override
 	public String toString() {
-		return "Item [PrecoUnitario=" + PrecoUnitario + ", Produto=" + Produto + ", Quantidade=" + Quantidade
-				+ ", TotalPorItem=" + TotalPorItem + "]";
+		return "Item [Produto=" + Produto + 
+				", Tipo Produto=" + tipoProduto + 
+				", PrecoUnitario=" + PrecoUnitario +
+				", Quantidade=" + Quantidade + 
+				", TotalPorItem=" + TotalPorItem +
+				", TotalDesconto=" + TotalDesconto + "]";
 	}
 
 	
