@@ -1,22 +1,24 @@
 package carrinhoCompras;
 
+import carrinhoCompras.TipoProduto.TipoProd;
+
 public class Item {
 
     protected String Produto;
-    private TipoProduto tipoProduto;
+    public TipoProd tipoProduto;
     protected int Quantidade;
     double PrecoUnitario;
     double TotalPorItem;
     double TotalDesconto;
 
 
-    public Item(String produto, TipoProduto tipoProduto, int quantidade, double precoUnitario) {
+    public Item(String produto, TipoProd hortifruti, int quantidade, double precoUnitario) {
         this.Produto = produto;
-        this.tipoProduto = tipoProduto;
+        this.tipoProduto = hortifruti;
         this.Quantidade = quantidade;
         this.PrecoUnitario = precoUnitario;
         this.TotalPorItem = Quantidade*PrecoUnitario;
-        this.TotalDesconto = Quantidade*tipoProduto.getDesconto();
+        this.TotalDesconto = Quantidade*hortifruti.getDesconto();
     }
 
     //tostring
@@ -38,11 +40,11 @@ public class Item {
 		Produto = produto;
 	}
 
-	public TipoProduto getTipoProduto() {
+	public TipoProd getTipoProduto() {
 		return tipoProduto;
 	}
 
-	public void setTipoProduto(TipoProduto tipoProduto) {
+	public void setTipoProduto(TipoProd tipoProduto) {
 		this.tipoProduto = tipoProduto;
 	}
 
