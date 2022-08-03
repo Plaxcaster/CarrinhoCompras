@@ -1,23 +1,30 @@
 package carrinhoCompras;
 
-public enum TipoProduto {
-	Bebidas(0),
-	Carnes(0),
-	Higiene(0),
-	Hortifruti(0.20),
-	Limpeza(0),
-	Mercearia(0),
-	Padaria(0);
+public class TipoProduto{ 
 
-	final double desconto;
+	public enum TipoProd {
+		Bebidas(0),
+		Carnes(0),
+		Higiene(0),
+		Hortifruti(0.20),
+		Limpeza(0),
+		Mercearia(0),
+		Padaria(0);
 
-	TipoProduto(double desconto){
-		this.desconto = desconto;
+		final double desconto;
+
+		TipoProd(double desconto){
+			this.desconto = desconto;
+		}
+
+		public double getDesconto() {
+			return desconto;
+		}
+
+		
 	}
 
-	public double getDesconto() {
-		return desconto;
-	}
-
-	
+    public int getDesconto() {
+        return 0;
+    }
 }
