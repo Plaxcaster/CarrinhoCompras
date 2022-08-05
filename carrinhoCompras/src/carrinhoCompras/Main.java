@@ -7,19 +7,16 @@ public class Main {
 
     public static void main(String[] args) {
         
-        Item itemTeste1 = new Item("Maca", TipoProduto.TipoProd.Hortifruti, 5, 0.50);
-        Item itemTeste2 = new Item("Banana", TipoProduto.TipoProd.Hortifruti, 5, 0.30);
-        Item itemTeste3 = new Item("Morango", TipoProduto.TipoProd.Hortifruti, 5, 1.00);
-        Item itemTeste4 = new Item("Morango", TipoProduto.TipoProd.Hortifruti, 5, 1.00);
-        Item itemTeste5 = new Item("Picanha", TipoProduto.TipoProd.Carnes, 1, 100.00);
+    	Catalogo catalogo = new Catalogo(); //Inicializa os itens que podem ser adicionados no carrinho
 
         CarrinhoCompras carrinho = new CarrinhoCompras();
 
-        AddItem.adicionaItem(carrinho, itemTeste1);
-        AddItem.adicionaItem(carrinho, itemTeste2);
-        AddItem.adicionaItem(carrinho, itemTeste3);
-        AddItem.adicionaItem(carrinho, itemTeste4);
-        AddItem.adicionaItem(carrinho, itemTeste5);
+        AddItem.adicionaItem(carrinho, catalogo.getItem(1));
+        AddItem.adicionaItem(carrinho, catalogo.getItem(2));
+        AddItem.adicionaItem(carrinho, catalogo.getItem(3));
+        AddItem.adicionaItem(carrinho, catalogo.getItem(4));
+        AddItem.adicionaItem(carrinho, catalogo.getItem(5));
+
         
         System.out.println();
         System.out.println("Carrinho pos-adicao:");
@@ -32,7 +29,7 @@ public class Main {
         ImprimeCarrinho.listaCarrinho(carrinho);
         TotalCarrinho.calcularTotal(carrinho);
         
-        RemoveItem.removeItem(carrinho, itemTeste2);
+        RemoveItem.removeItem(carrinho, catalogo.getItem(1));
         
         System.out.println();
         System.out.println("Carrinho pos-exclusao:");
