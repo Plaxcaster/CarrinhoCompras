@@ -12,7 +12,7 @@ public class ClienteDao implements BaseDao<Cliente, String> {
     @Override
     public Cliente salvar(Cliente cliente) {
         clientes.add(cliente);
-        System.out.println("Cliente salvo" + cliente);
+        System.out.println("Cliente salvo \n" + cliente);
         return cliente;
     }
 
