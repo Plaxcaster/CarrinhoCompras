@@ -2,7 +2,6 @@ package carrinhoCompras;
 
 public abstract class Cliente {
 
-	CarrinhoCompras carrinho;
 	private String Nome;
     private String numeroConta;
     
@@ -22,9 +21,7 @@ public abstract class Cliente {
     public void setNumeroConta(String numeroConta) {
         this.numeroConta = numeroConta;
     }
-    public void setCarrinho(CarrinhoCompras carrinho) {
-		this.carrinho = carrinho;
-	}
+
     @Override
     public String toString() {
         return "Pessoa [Nome=" + Nome + ", numeroConta=" + numeroConta + "]";
